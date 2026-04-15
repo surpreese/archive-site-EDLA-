@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDLA</title>
+<link rel="stylesheet" type="text/css" href="EDLA.css">
+</head>
+<body>
+        <div class="custom-cursor"><img src="12_Curseur/echo1.png"></div>
+        <script>
+            document.addEventListener("mousemove", function(e) {
+            const cursor = document.querySelector(".custom-cursor");
+            cursor.style.left = e.clientX + "px";
+            cursor.style.top = e.clientY + "px";
+        });
+        </script>
+        <div id="header">
+        <div class="grid-container2" id="description">
+            <img class="grid-item item4" src="monogramme/monogramme_EDLA_Plan de travail 1.svg"></img>
+            <p class="grid-item item6">After studying graphic design for four years at the Royal Academy of Fine Arts, in <a>Antwerp</a> (2018-2022), 
+                I’m currently doing a second master, in typography, in La Cambre, <a>Bruxelles</a> (2022-2024). My practice 
+                involves designing, editing, writing. I’m looking for an internship in <a>Bruxelles</a> 
+                (or another <a> belgian / european city</a>), for the end of summer / beginning of autumn 2024.</p>
+            <p3 class="grid-item item5">
+                Echappatoire Dans L'Alphabet<br>
+                Editing Doubt, Language and Absence<br>
+                Een Dubbelzinnige Letter Af\getypt<br>
+            </p3>
+        </div>
+            <script>
+                function envoyerEmail() {
+                    // Adresse email du destinataire
+                    var destinataire = "emilie.dlrbr@gmail.com";
+                    
+                    // Sujet de l'email
+                    var sujet = "";
+                    
+                    // Corps de l'email
+                    var corps = "";
+                    
+                    // Construction de l'URL mailto
+                    var mailtoURL = "mailto:" + destinataire + "?subject=" + encodeURIComponent(sujet) + "&body=" + encodeURIComponent(corps);
+                    
+                    // Ouvrir l'URL mailto dans une nouvelle fenêtre
+                    window.open(mailtoURL);
+                }
+            </script>
+        </div>
+    </div>
+
+    <!--<div class="container">
+        <div class="object"><button onclick="envoyerEmail()"><img src="bouton-mailf.png" alt="emilie.dlrbr@gmail.com"></button></div>
+      </div>-->    
+      <!--<div class="container">
+        <div class="object2"><button onclick="envoyerEmail()"><img src="bouton-mail2.png" alt="emilie.dlrbr@gmail.com"></button></div>
+      </div>-->  
+
+        <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+        <div><button id="draggableButton" draggable="true" onclick="envoyerEmail()"><img src="contact/bouton-mail2.png" alt="emilie.dlrbr@gmail.com" style="width:300px;height:auto"></img></button></div>
+
+<script>
+    const draggableButton = document.getElementById('draggableButton');
+
+// Set draggable attribute
+draggableButton.draggable = true;
+
+// Store the initial position of the cursor relative to the button when dragging starts
+let initialX;
+let initialY;
+
+draggableButton.addEventListener('dragstart', function(event) {
+    // Store the initial position of the cursor relative to the button
+    initialX = event.clientX - draggableButton.getBoundingClientRect().left;
+    initialY = event.clientY - draggableButton.getBoundingClientRect().top;
+
+    // Set data to be dragged
+    event.dataTransfer.setData('text/plain', 'Draggable button');
+});
+
+draggableButton.addEventListener('dragover', function(event) {
+    // Prevent default behavior
+    event.preventDefault();
+
+    // Calculate the new position of the button
+    const newX = event.clientX - initialX;
+    const newY = event.clientY - initialY;
+
+    // Update the position of the button
+    draggableButton.style.left = `${newX}px`;
+    draggableButton.style.top = `${newY}px`;
+});
+
+draggableButton.addEventListener('drop', function(event) {
+    // Prevent default behavior
+    event.preventDefault();
+
+    // Reset cursor style after dropping
+    draggableButton.style.cursor = 'move';
+});
+</script>
+
+            <div class="row-fluid">
+                <div class="column1" style="background-color: transparent;">
+                    <div class="scrollable"></div>
+                        <button onclick="scrollToSection('section0')" class="btn"><h1>Projects</h1></button><br>
+                        <button onclick="scrollToSection('section1')" class="btn">Warszawa ws</button><br>
+                        <!--<button onclick="scrollToSection('section0.2')" class="btn">Une édition dans le train</button><br>-->
+                        <button onclick="scrollToSection('section2')" class="btn">Spanning</button><br>
+                        <button onclick="scrollToSection('section3')" class="btn">Monstrosity in writing</button><br>
+                        <button onclick="scrollToSection('section4')" class="btn">Levensgevaar</button><br>
+                        <button onclick="scrollToSection('section5')" class="btn">Ode aux Corbeaux</button><br>
+                        <button onclick="scrollToSection('section6')" class="btn">Vitrail</button><br>
+                        <button onclick="scrollToSection('section7')" class="btn">Exocet</button><br>
+                        <button onclick="scrollToSection('section8')" class="btn">Fleurs de Lune</button><br>
+                        <button onclick="scrollToSection('section9')" class="btn">Foreshore</button><br>
+                        <button onclick="scrollToSection('section10')" class="btn">Bia</button><br>
+                        <button onclick="scrollToSection('section11')" class="btn">Dualitéit</button><br>
+                        <br>
+                        <button onclick="scrollToSection('section12')" class="btn"><h1>Typefaces</h1></button>
+                        <br>
+                        <button onclick="scrollToSection('section13')" class="btn"><h1>Research</h1></button>
+                        <p>Current: « Caractère d’échappement », Thesis supervised by La Cambre and ULB, Pierre Huyghebaert and Ellen Van Huffel.</p>
+                        <p>Past: « A fish sleeping on the shore », Nicolas Baeyens and Andrea di Serego Alighieri, as Supervisor and co-Supervisor.</p>
+                        <br>
+                        <button onclick="scrollToSection('section14')" class="btn"><h1>Drawings</h1></button><br>
+                        <button><h1>Colophon</h1></button><br>
+                        <p>Fonts: « Spanning », « Nimbus Sans L » by URW Design Studio and « Tournure »</p>
+                    </div>
+
+            <script>
+                // Example: Listening to scroll events to determine the current section
+                    document.addEventListener('scroll', function() {
+                        var sections = document.querySelectorAll('btn[id^="section"]');
+                        var currentPosition = window.scrollY;
+
+                    sections.forEach(function(section, index) {
+                        var sectionPosition = section.offsetTop;
+                        var nextSectionPosition = (index + 1 < sections.length) ? sections[index + 1].offsetTop : document.body.scrollHeight;
+
+                        if (currentPosition >= sectionPosition && currentPosition < nextSectionPosition) {
+                            section.classList.add('current-section');
+                        } else {
+                            section.classList.remove('current-section');
+                        }
+                    });
+                });
+            </script>
+
+                <script>
+                    function scrollToSection(sectionId) {
+                        var section = document.getElementById(sectionId);
+                        section.scrollIntoView({ behavior: "smooth" });
+                    }
+                </script>
+
+
+                <div class="column2" style="background-color: transparent;">
+                    <div class="scrollable"></div>
+
+                    <div class="grid-container" id="section0">
+
+                        <div class="grid-container">
+                            <div class="grid-item item1" id="section1"><h2>Phonotypo (Warszawa ws), 2024</h2></div>
+                            <div class="grid-item item2">
+                                <div class="carousel">
+                                    <div class="carousel-inner">
+                                      <div class="carousel-item">
+                                        <img src="0.1-workshop_Warszawa/Czesuo'.png" alt="Image 0.11">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img src="0.1-workshop_Warszawa/sketch.webp" alt="Image 0.14">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img src="0.1-workshop_Warszawa/blobashiltotei'.png" alt="Image 0.12">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img src="0.1-workshop_Warszawa/dzegetszc.png" alt="Image 0.13">
+                                      </div>
+                                    </div>
+                                    <button class="prev-btn">\</button>
+                                    <button class="next-btn">/</button>
+                                    </div>
+                            </div>
+                            <div class="grid-item item3"><p class="description-img">
+                                Workshop organised with students from Warsaw,
+                                words were composed and represented solely on the basis of their 
+                                audio recording. A group of students from Oslo also took part in the project. 
+                                The process was as follows: a student 
+                                was given a word, at random, in a language that is foreign to them 
+                                - Polish / Norwegian / French. An edition bringing together all the designs 
+                                produced between 13 and 15 March is currently being prepared.<br>
+                                <br>
+                                Postcards, POL / NO / FR <br>
+                                10,5 x 14,8 cm, composed with 'Baccarat półgruby' / 6pt ornaments<br>
+                                The 'sz' ligature on the last composition is printed using 
+                                a self-designed polymer<br>
+                               <a>languages, experimentation</a></p></div>
+                        </div> 
+                        
+                        <div class="grid-container">
+                        <div class="grid-item item1" id="section2"><video src="1_spanning_specimen/sssspanning.mp4" alt="video title" height="30px" autoplay loop></div>
+                        <div class="grid-item item2"><div class="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item">
+                                <img src="1_spanning_specimen/front.png" alt="Image 1">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="1_spanning_specimen/inside1.webp" alt="Image 2">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="1_spanning_specimen/inside2.webp" alt="Image 3">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="1_spanning_specimen/inside-univerbation.webp" alt="Image 3.1">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="1_spanning_specimen/inside-extra.webp" alt="Image 3.2">
+                              </div>
+                              <div class="carousel-item">
+                                <video src="1_spanning_specimen/spanning_postinsta/1-spanning7.mp4" alt="Image 3.4" autoplay loop></video>
+                              </div>
+                            </div>
+                            <button class="prev-btn">\</button>
+                            <button class="next-btn">/</button>
+                        </div>
+                        <script>document.addEventListener('DOMContentLoaded', function() {
+                            const animatedText = document.querySelector('.animated-text');
+                            animatedText.addEventListener('animationiteration', function() {
+                              // Restart animation on each iteration
+                              animatedText.classList.remove('animate');
+                              void animatedText.offsetWidth; // Trigger reflow
+                              animatedText.classList.add('animate');
+                            });
+                          });</script>
+                          </div>
+                        <div class="grid-item item3"><p class="description-img">
+                            Spanning is a variable-pixel font whose first tests took shape during 
+                            a workshop presented by Eugénie Bidault. The proportions and character 
+                            designs are based on those of Baskerville. This typeface is a way of 
+                            representing the evolution of language — by following a certain protocol, 
+                            it deforms the letters and randomly composes new shapes. These new shapes 
+                            can then be used in different contexts, whether to create inclusive or 
+                            bilingual glyphs. Spanning also offers a number of extra glyphs that 
+                            can be used to add nuance to writing, for example by highlighting 
+                            certain letters or words.<br>
+                            <br>
+                            Specimen, ENG (+ some french and dutch)<br>
+                            A4, 142 p.<br>
+                            <a>language evolution, shape-shifting</a><br>
+                        </p>
+                        </div>
+                    </div> 
+  
+                    <div class="grid-container">
+                        <div class="grid-item item1" id="section3"><h2>Monstrosity in writing, 2023</h2></div>
+                        <div class="grid-item item2">
+                            <div class="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item">
+                                    <img src="2_Monstrosity/front.png" alt="Image 4">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="2_Monstrosity/inside-db.webp" alt="Image 5">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="2_Monstrosity/verso.webp" alt="Image 6">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="2_Monstrosity/IMG_9144.jpg" alt="Image 6.2">
+                                  </div>
+                                </div>
+                                <button class="prev-btn">\</button>
+                                <button class="next-btn">/</button>
+                                </div>
+                        </div>
+                        <div class="grid-item item3"><p class="description-img">Clouds are perceptions 
+                            that compose and decompose. Perceptions are like clouds that compose 
+                            and decompose.<br>
+                            <br>
+                            Booklet - Poster (recto/verso), ENG / FR <br>
+                            17,5 x 25 cm, composed with 'Grotius' + 'LEGO'<br>
+                           <a>inclusive writing, xenophobia, changement</a></p></div>
+                    </div> 
+                
+                    <div class="grid-container">
+                        <div class="grid-item item1" id="section4"><h2>Levensgevaar, 2023</h2></div>
+                        <div class="grid-item item2"><img src="3_Levensgevaar/Panorama sans titre-1.webp"></div>
+                        <div class="grid-item item3"><p class="description-img">
+                            <p1>LEVENSGEVAAR<br>
+                            LA LANGUE VALSE EN VERS<br>
+                            EEN LANGE VERRE VLAG</p1><br>
+                            <br>
+                            Poster, NL<br>
+                            50 x 70 cm, letterpress printing + 'LEGO' bricks<br>
+                            <a>anagrams, modularity</a></p></div>
+                    </div> 
+
+                    <div class="grid-container">
+                        <div class="grid-item item1" id="section5"><h2>Ode aux corbeaux, 2023</h2></div>
+                        <div class="grid-item item2">
+                            <div class="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item">
+                                    <img src="3.2_Ode aux corbeaux/publication.webp" alt="Image 7">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="3.2_Ode aux corbeaux/inside.webp" alt="Image 8">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="3.2_Ode aux corbeaux/back.webp" alt="Image 9">
+                                  </div>
+                                </div>
+                                <button class="prev-btn">\</button>
+                                <button class="next-btn">/</button>
+                                </div>
+                        </div>
+                        <div class="grid-item item3"><p class="description-img">
+                            Ce n’était pas tant sa solitude qui le rendait malheureux, mais plutôt 
+                            le fait que son rejet soit lié à une perception erronée de ce qu’il est 
+                            vraiment.  Plus que cela même, c’est ce que les hommes projetaient sur 
+                            lui qui le résumait à ce qu’il n’était pas. Ils n’avaient retenu que la 
+                            noirceur de sa silhouette et c’est cet unique motif qui le rendait coupable. 
+                            Lorsqu’il était seul, il n’éprouvait que la joie d’être, tout simplement. 
+                            Il suivait ce qui l’attirait. — Abstract from 'Ode aux corbeaux'<br>
+                            <br>
+                            Booklet / Poster, FR<br>
+                            A3 folded, fonts: 'Spanning'<br>
+                            <a>hope, introversion, iconophagy</a></p></div>
+                    </div> 
+                    
+                    <div class="grid-container">
+                        <div class="grid-item item1" id="section6"><h2>Vitrail, 2022-2023</h2></div>
+                        <div class="grid-item item2">
+                            <div class="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item">
+                                    <img src="4_Vitrail/vitrail-1.webp" alt="Image 10">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="4_Vitrail/IMG_0503.jpg" alt="Image 11">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="4_Vitrail/IMG_0385.jpg" alt="Image 12">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="4_Vitrail/recherche.webp" alt="Image 13">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="4_Vitrail/test5.png" alt="Image 13.2">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="4_Vitrail/test2.png" alt="Image 13.3">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="4_Vitrail/test6.png" alt="Image 13.4">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="4_Vitrail/test1.webp" alt="Image 13.7">
+                                  </div>
+                                </div>
+                                <button class="prev-btn">\</button>
+                                <button class="next-btn">/</button>
+                                </div>
+                        </div>
+                        <div class="grid-item item3"><p class="description-img">
+                            Merci à vous, d’avoir lu ce mail dans son entièreté, dans l’espoir 
+                            que vous trouverez vous aussi important le fait d’apporter le soin 
+                            à ces bâtiments qui font partie intégrante de notre patrimoine.
+                            — Abstract from an email sent to the FWB.<br>
+                            <br>
+                            Vitrail, 12 x 18 cm<br>
+                            Made by Oscar Flores, in his atelier <br>
+                            (33 Rue de Dublin, 1050 Ixelles)
+                        </p></div>
+                    </div> 
+                    
+                    <div class="grid-container">
+                        <div class="grid-item item1" id="section7"><h2>Exocet, 2022</h2></div>
+                        <div class="grid-item item2">
+                            <div class="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item">
+                                    <img src="5_Exo/coverrecto.webp" alt="Image 14">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <video src="5_Exo/vidéo_exocet2.mp4" alt="Image 14.2" autoplay loop muted>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="5_Exo/liberté.webp" alt="Image 15">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="5_Exo/perte1.webp" alt="Image 16">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="5_Exo/auto-odi2.webp" alt="Image 16.2">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="5_Exo/echo1.webp" alt="Image 16.3">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="5_Exo/amtterris.jpg" alt="Image 17">
+                                  </div>
+                                </div>
+                                <button class="prev-btn">\</button>
+                                <button class="next-btn">/</button>
+                                </div>
+                        </div>
+                        <div class="grid-item item3"><p class="description-img">
+                            W.HERE<br>
+                            T.HE<br>
+                            SW.ALLOWS<br>
+                            C.ALL<br>
+                            EX.CHANGE<br>
+                            .<br>
+                            O.PEN<br>
+                            H.AND<br>
+                            H.ARM<br>
+                            Y.OURSELF<br>
+                            .<br>
+                            COL.OR<br>
+                            A.PART<br>
+                            BEHO.OF<br>
+                            Y.OURSELF<br>
+                            .<br>
+                            H.OUR<br>
+                            D.OWN<br>
+                            SQU.ARE<br>
+                            WITH.OUT<br>
+                            HEART<br>
+                            <br>
+                            Bilingual edition, ENG / FR (+ some dutch)<br>
+                            The book works as a palyndrom. There is one original and an edition of 30 facsimiles.<br>
+                            A4, 193 p., swiss binding<br>
+                            fonts: 'Libre Baskerville', 'MEAN 26'<br>
+                            <a>language evolution, writing, punctum delens</a>
+                        </p></div>
+                    </div> 
+                    
+                    <div class="grid-container">
+                        <div class="grid-item item1" id="section8"><h2>Fleurs de Lune, 2022</h2></div>
+                        <div class="grid-item item2">
+                            <div class="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item">
+                                        <img src="6_Fleursdelune/shop.webp" alt="Image 19">
+                                      </div>
+                                  <div class="carousel-item">
+                                    <img src="6_Fleursdelune/Fichier 1.PNG" alt="Image 18">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="6_Fleursdelune/bâche.webp" alt="Image 20">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="6_Fleursdelune/horaire.webp" alt="Image 21">
+                                  </div>
+                                </div>
+                                <button class="prev-btn">\</button>
+                                <button class="next-btn">/</button>
+                                </div>
+                        </div>
+                        <div class="grid-item item3"><p class="description-img">
+                            "Suis-je la fleur de lune<br>
+                            Ou bien l'eau qui dort?<br>
+                            Suis-je l'herbe sauvage<br>
+                            Ou le ciel de pluie?"<br>
+                            <br>
+                            Logo designed for two florists opening their shop together in Couillet (377 Route de Philippeville, 6010 Charleroi) 
+                            in 2022. I help them finding a name, after several propositions they went for 'Fleurs de Lune', which I came up with 
+                            after listening to Françoise Hardy's eponymous song.<br>
+                            <br>
+                            Logo based on the ligature ‘Fl’<br>
+                            Typeface: 'IBM Plex'<br>
+                            </p></div>
+                    </div> 
+                    
+                    <div class="grid-container">
+                        <div class="grid-item item1" id="section9"><h2>Foreshore, 2021</h2></div>
+                        <div class="grid-item item2">
+                            <div class="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item">
+                                    <video src="7_Foreshore/drapo2 copie.MP4" alt="Vidéo 1" autoplay loop muted>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <video src="7_Foreshore/ligature.mp4" alt="Image 23" autoplay loop muted>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="7_Foreshore/foreshore_livre.png" alt="Image 23.2">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="7_Foreshore/foreshore_livre2.png" alt="Image 24">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="7_Foreshore/foreshore_05.png" alt="Image 25">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="7_Foreshore/zigzag.jpg" alt="Image 26">
+                                  </div>
+                                </div>
+                                <button class="prev-btn">\</button>
+                                <button class="next-btn">/</button>
+                                </div>
+                        </div>
+                        <div class="grid-item item3"><p class="description-img">Foreshore is a typeface based on the concept of ligatures. 
+                            Its first objective, and also one of the ligature’s objectives, is to reduce the space 
+                            used in order to reduce paper consumption. To achieve that idea, various stratagems have been applied to Foreshore, 
+                            for example the Latin alphabet is deformed / adapted to follow the way Arabic scripts are fonctionning. 
+                            All the letters of Foreshore have 4 different shapes, it changes depending on their place in a word 
+                            (an isolated, an initial, a medial and a final form). 
+                            A text written with Foreshore can be reduce until 62,2%. ‘Les cages flottantes’ is the name of the books 
+                            serie I made using foreshore, to see how much space is saved.</p></div>
+                    </div> 
+                    
+                    <div class="grid-container">
+                        <div class="grid-item item1" id="section10"><h2>Bia, 2021</h2></div>
+                        <div class="grid-item item2"><div class="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item">
+                                <img src="9_Foulard/IMG_0365.jpg" alt="Image 29">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="9_Foulard/bia.webp" alt="Image 30">
+                              </div>
+                              <div class="carousel-item">
+                                <video src="9_Foulard/bia3.mp4" alt="Image 31" autoplay loop muted>
+                              </div>
+                            </div>
+                            <button class="prev-btn">\</button>
+                            <button class="next-btn">/</button>
+                            </div></div>
+
+                        <div class="grid-item item3"><p class="description-img">Once, someone stole my friend's scarf. I'd been wanting 
+                            to give her something special for a while, so I decided to make her a personalized 
+                            scarf. I wanted to make her something that could represent her. The words «change» 
+                            and «strength» were important in this research. Bia is a deity of Greek mythology, 
+                            sister of Nike, personifying those ideas. Colors are chosen following the scarf she lost.<br>
+                            <br>
+                            Scarf, silk<br>
+                            70 x 70 cm<br>
+                            <a>changement, strength, mythology</a>
+                        </p></div>
+                    </div> 
+                    
+                    <div class="grid-container">
+                        <div class="grid-item item1" id="section11"><h2>Dualitéit, 2019</h2></div>
+                        <div class="grid-item item2">
+                            <div class="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item">
+                                    <img src="11_Dualitéit/IMG_2215.JPG" alt="Image 35">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="11_Dualitéit/IMG_2210.JPG" alt="Image 36">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="11_Dualitéit/IMG_2212.JPG" alt="Image 37">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <video src="11_Dualitéit/video_dual.mp4" alt="Image 37" autoplay loop muted>
+                                  </div>
+                                </div>
+                                <button class="prev-btn">\</button>
+                                <button class="next-btn">/</button>
+                                </div>
+                        </div>
+                        <div class="grid-item item3"><p class="description-img">
+                            «Dualitéit» is a bilingual poster, based on words that are 
+                            visually identical in French and Dutch. To read this text, you need to be able to 
+                            speak both languages in order to follow the transition from one to the other. 
+                            It represents, at the same time, the limits of the language barrier but also what 
+                            makes Belgium so rich and particular: its duality. This poster is a visual metaphor 
+                            of the cacophony that one can encounter while living in this country. The footnotes 
+                            explain in French what each word means in both languages and vice versa. The following 
+                            example might perhaps illustrate my process.<br>
+                            <br>
+                            Arme:<br>
+                            (FR) Français, définition: Objet (violence, combat)<br>
+                            (FR) Néerlandais, traduit: Adjectif “pauvre” accordé<br>
+	                        (NL) Frans:  Voorwerp (geweld, gevecht)<br>
+	                        (NL) Nederlands: Adjectief “arm”<br>
+                            <br>
+                            Poster, NL / FR<br>
+                            A0, fonts: 'Stratos', 'Motor-stencil'<br>
+                            <a>bilingualism, belgium, identity</a><br>
+                        </p></div>
+                    </div>  
+                    <div class="grid-container">
+                        <div class="grid-item item1" id="section12"><h2>Typeface trial</h2></div>
+                        <div class="grid-item item2">
+                            <div class="font-preview">
+                                <div id="previewText" class="preview-text" contentEditable="true" spellcheck="false">
+                                    <p1>tournure</p1><br>
+                                    <p2>Spanning</p2><br>
+                                    <p3>Foreshore</p3><br>
+                                </div>
+                            </div>
+                    </div> 
+                    </div>
+
+                    <div class="grid-container">
+                        <div class="grid-item item1" id="section13"><h2>A fish sleeping on the shore, 2022</h2></div>
+                        <div class="grid-item item2"><div class="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item">
+                                <img src="thesis/IMG_3378.webp" alt="Image 38">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="thesis/32-33.webp" alt="Image 39">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="thesis/34-35.webp" alt="Image 40">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="thesis/36-37.webp" alt="Image 41">
+                              </div>
+                            </div>
+                            <button class="prev-btn">\</button>
+                            <button class="next-btn">/</button>
+                            </div>
+                    </div>
+                        <div class="grid-item item3"><p class="description-img">
+                            I choose to start this reflection around a diacritic from the Latin alphabet - the superscript dot. 
+                            It is the starting point but could also be considered as the gravitational center of my thesis.<br>
+                            <br>
+                            Thesis, ENG (+ FR for the conclusion)<br>
+                            16x23 cm, 124 p., glued binding<br>
+                            <a>removal in language, punctum delens, multilingualism</a><br>
+                            <br>
+                            To read more about « A fish sleeping on the shore », send me an e-mail.<br>
+                            <br>
+                        </p></div>
+                    </div> 
+
+                    <div class="grid-container">
+                        <div class="grid-item item1" id="section14"><h2>Dessins et lettrages</h2></div>
+                        <div class="grid-item item2">
+                            <img src="drawings/plouf.jpg">
+                            <img src="drawings/crayon.JPG">
+                            <img src="drawings/crayon2.JPG">
+                            <img src="drawings/crayon3.jpg">
+                            <img src="drawings/crayon4.jpg">
+                            <img src="drawings/86D003D9-24B6-44AB-A2DF-4C9FDC2D8F4E.JPG">
+                            <img src="drawings/IMG_5376.jpg">
+                            <img src="drawings/IMG_3592.jpg"></div>
+                    </div> 
+                </div>
+          
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const carousels = document.querySelectorAll('.carousel');
+
+  carousels.forEach((carousel) => {
+    const carouselInner = carousel.querySelector('.carousel-inner');
+    const prevBtn = carousel.querySelector('.prev-btn');
+    const nextBtn = carousel.querySelector('.next-btn');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      const slides = carousel.querySelectorAll('.carousel-item');
+      slides.forEach((slide, i) => {
+        slide.style.transform = `translateX(-${index * 100}%)`;
+      });
+    }
+
+    prevBtn.addEventListener('click', function() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        showSlide(currentIndex);
+      }
+    });
+
+    nextBtn.addEventListener('click', function() {
+      const slides = carousel.querySelectorAll('.carousel-item');
+      if (currentIndex < slides.length - 1) {
+        currentIndex++;
+        showSlide(currentIndex);
+      }
+    });
+  });
+});
+</script>
+
+<script>
+    $('.carousel').carousel({
+  interval: 2000, // Change slide interval as needed
+  pause: 'hover' // Pause on hover, optional
+});
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const textInput = document.getElementById('textInput');
+    const fontSelect = document.getElementById('fontSelect');
+    const previewText = document.getElementById('previewText');
+
+    // Function to update font preview
+    function updatePreview() {
+        const selectedFont = fontSelect.value;
+        const inputText = textInput.value;
+        previewText.style.fontFamily = selectedFont;
+        previewText.textContent = inputText;
+    }
+
+    // Event listeners for input and select change
+    textInput.addEventListener('input', updatePreview);
+    fontSelect.addEventListener('change', updatePreview);
+
+    // Initial update
+    updatePreview();
+});
+</script>
+
+</body>

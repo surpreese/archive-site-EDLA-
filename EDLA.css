@@ -1,0 +1,506 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+    cursor: none; /* hide the default cursor */
+    font-family: "dindong";
+    font-family: "spanning";
+    font-family: "tournure";
+}
+
+@font-face {
+    font-family: "dindong";
+    src: url('13_typo/dindong.otf');
+}
+
+@font-face {
+    font-family: "tournure";
+    src: url('13_typo/tournure.ttf');
+}
+
+@font-face {
+    font-family: "spanning";
+    src: url('13_typo/spanning.ttf');
+}
+
+@font-face {
+    font-family: "foreshore";
+    src: url('13_typo/foreshore.otf')
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 120px; /* Adjust width and height as needed */
+    pointer-events: none; /* Ensure it doesn't interfere with hover/click events */
+    z-index: 9999; /* Make sure it's above other elements */
+  }
+
+.link {
+    text-decoration: none;
+    font-family: "dindong";
+    font-size: 12pt;
+    color: rgb(20, 146, 92);
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+float: left;
+width: 30%;
+padding: 15px;
+max-width: 300px;
+}
+
+div > .column1 {
+    overflow: scroll;
+    height: 850px;
+}
+
+button h1:hover {
+    color: rgb(20, 146, 92);
+}
+
+button:hover, button:active{
+    color: rgb(20, 146, 92);
+}
+
+.column2 {
+float: left;
+width: 70%;
+padding: 15px;
+}
+
+div > .column2 {
+    overflow: scroll;
+    height: 850px;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+#draggableButton {
+    position: absolute;
+    left: 1100px;
+    top: 460px;
+    cursor: move;
+}
+  
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.column2 {
+    width: 100%;
+    margin-top: 110px;
+}
+.item3 {
+    display: none;
+}
+.column1 {
+display: none;
+}
+.object2 {
+    display: none;
+}
+}
+
+@media screen and (max-width: 900px) {
+.grid-container2{
+    padding: 10px;
+}
+
+.item4 {
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    width: 200px;
+    margin: 10px;
+}
+
+.item5 {
+    position: absolute;
+    left: 200px;
+    top: 10px;
+}
+
+.item6 {
+    position: absolute;
+    left: 20px;
+    top: 120px;
+}
+
+body {
+    margin-top: 100px;
+}
+.object2 {
+    display: none;
+}
+
+}
+
+@media screen and (max-width: 800px) {
+.grid-container2 {
+    display:none;
+    background-color: transparent;
+    padding: 0px;
+    max-width: 100%;
+    max-height: 180px;
+}
+
+.item4 {
+    grid-column: 1;
+    grid-row: 1;
+}
+.item5 {
+    grid-column: 2;
+    grid-row: 1;
+}
+.item6 {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+
+}
+
+.object2 {
+    width: 300px;
+    background-color: transparent;
+    position: absolute;
+    top: 400px; /* Adjust top position as needed */
+    left: 1300px; /* Adjust left position as needed */
+}
+
+.grid-container2 {
+    display: grid;
+    background-color: transparent;
+    padding: 0px;
+    max-width: 100%;
+    max-height: 220px;
+    grid-template-columns: 20% 40% 40%; /* Example widths for columns */
+    grid-template-rows: 180px; /* Example heights for rows */
+}
+
+.grid-item {
+    background-color: transparent;
+    padding: 0px;
+}
+
+.item4 {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: 100%;
+    z-index: 1;
+}
+  
+.item5 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.item6 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+h1 {
+ font-family: "spanning";
+ font-weight: 100;
+ font-size: 18pt;
+ color: black;
+ margin-top: 0px;
+}
+
+body {
+    background-color: rgb(250, 250, 250);
+    cursor: url("curseur/echo.png"), auto;
+    size: 50px;
+}
+
+h2 {
+    font-family: "spanning";
+    font-weight: 100;
+    font-size: 18pt;
+    color: black;
+    margin-top: 0px;
+}
+
+p {
+    font-family: "dindong";
+    font-style: normal;
+    font-size: 12pt;
+    max-width: 600px;
+    line-height: auto;
+}
+
+#description > p3 {
+    font-family: "dindong";
+    font-size: 12pt;
+    color: rgb(20, 146, 92);
+    line-height: auto;
+    padding-top: 25px;
+}
+
+@media (max-width: 480px) {
+    #menu, #main {
+    width: 100%;
+    }
+.object2 {
+    display: none;
+}
+}
+
+
+#description {
+    max-width: 100%;
+    padding: 15px;
+}
+
+#description > h1 {
+    font-size: 18pt;
+}
+
+#description > h2 {
+    font-family: "tournure";
+    font-size: 12pt;
+    color: black;
+}
+
+#description > p2 {
+    color: black;
+    font-family: "spanning";
+    font-weight: 100;
+}
+
+.description-img > p1 {
+    color: black;
+    font-family: "spanning";
+    font-weight: 100;
+}
+
+.description-img > p2 {
+    color: black;
+    font-family: "spanning";
+    font-weight: 200;
+}
+
+.description-img > p3 {
+    color: black;
+    font-family: "spanning";
+    font-weight: 500;
+}
+
+.description-img > a {
+    font-family: "tournure";
+    font-size: 12pt;
+}
+
+.description-img > .link {
+    font-family: "dindong";
+    font-size: 12pt;
+}
+
+.description-img {
+    min-width: 250px;
+    max-width: 500px;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    background-color: transparent;
+    padding: 0px;
+    max-width: max-content;
+    position: relative;
+}
+
+button, .btn {
+    position: relative;
+    z-index: 10;
+}
+
+.grid-item {
+    background-color: transparent;
+    text-align: left;
+    padding: 10px;
+}
+  
+.item1 {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    height: 30px;
+}
+
+.item2 {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 3;
+    min-width: 300px;
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+  
+.item3 {
+    grid-column: 3;
+    grid-row: 2 / span 3;
+    margin-left: 10px;
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-align: inherit;
+    font: inherit;
+    border-radius: 0;
+    appearance: none;
+    color: black;
+    font-family: "dindong";
+    font-style: normal;
+    font-size: 12pt;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-align: inherit;
+    font: inherit;
+    border-radius: 0;
+    appearance: none;
+    color: black;
+    font-family: "dindong";
+    font-style: normal;
+    font-size: 12pt;
+}
+
+a{
+    text-decoration: none;
+    font-family: "spanning";
+    font-weight: 100;
+    color: black;
+}
+
+.current-section {
+    color: #ff6a00; /* Change to desired text color */
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    margin-inline: 8px;
+  }
+  
+  .carousel-item {
+    flex: 0 0 auto; /* Make each item take full width */
+    width: 100%;
+    
+  }
+
+  .carousel-item img {
+    max-width: 100%;
+    display:block;
+    height: auto;
+  }
+
+  .carousel-item video {
+    max-width: 100%;
+  }
+
+  video controls {
+    animation-play-state: running;
+  }
+  
+  .prev-btn, .next-btn {
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+  }
+  
+  .prev-btn {
+    left: 3px;
+    font-family: "spanning";
+    font-weight: 100;
+    font-size: 36pt;
+    color: rgb(20, 146, 92);    
+  }
+  
+  .next-btn {
+    right: 3px;
+    font-family: "spanning";
+    font-weight: 100;
+    font-size: 36pt;
+    color: rgb(20, 146, 92);
+  }
+
+  #girll {
+    width: 20px;
+
+  }
+
+  #girlr {
+    width: 20px;
+  }
+
+  .preview-text > p1 {
+    font-size: 36pt;
+    color: rgb(20, 146, 92);
+    font-weight: 100;
+    font-family: "tournure";
+    text-align: center;
+    height: 300px;
+    padding: 30px;
+}
+
+.preview-text > p2 {
+    font-size: 36pt;
+    color: rgb(20, 146, 92);
+    font-weight: 100;
+    font-family: "spanning";
+    text-align: center;
+    height: 300px;
+    padding: 30px;
+}
+
+.preview-text > p3 {
+    font-size: 36pt;
+    color: rgb(20, 146, 92);
+    font-weight: 100;
+    font-family: "foreshore";
+    text-align: center;
+    height: 300px;
+    padding: 30px;
+    font-feature-settings: "init", "medi", "fina", "dlig", "liga";
+}
+
+.grid-item > p1 {
+    font-family: "tournure";
+    font-size: 16pt;
+    color: black;
+}
+
+.grid-item > p2 {
+    font-family: "spanning";
+    font-size: 16pt;
+    color: black;
+}
+
+.grid-item > p3 {
+    font-family: "foreshore";
+    font-size: 16pt;
+    color: black;
+}
+
+[contenteditable] {
+    outline: 0px solid transparent;
+  }
